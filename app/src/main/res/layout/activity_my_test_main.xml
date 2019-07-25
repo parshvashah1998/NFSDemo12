@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Device">
+
+                <RadioButton
+                    android:id="@+id/radioS8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="ContactLess-Reader"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioS3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact-Reader"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioE7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keyboard-Reader"></RadioButton>
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroup_serialType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_device"
+                android:contentDescription="Port Type">
+
+                <RadioButton
+                    android:id="@+id/radioSerail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="SerialPort"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioUSB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="USB"></RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_devPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_serialType"
+                android:layout_marginTop="10dp"
+                android:text="Device Path:" />
+
+            <EditText
+                android:id="@+id/edt_devPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_serialType"
+                android:layout_alignBaseline="@+id/tv_devPath"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tv_devPath"
+                android:enabled="false"
+                android:singleLine="true"
+                android:text="/dev/ttySAC2" />
+
+            <TextView
+                android:id="@+id/tv_baud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_devPath"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Baud:" />
+
+            <EditText
+                android:id="@+id/edt_baud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_devPath"
+                android:layout_alignBaseline="@+id/tv_baud"
+                android:layout_alignLeft="@+id/edt_devPath"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_baud"
+                android:enabled="false"
+                android:singleLine="true"
+                android:text="abcd" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup_cardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_baud"
+                android:contentDescription="Card Type"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_card_M1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="M1"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_UltraLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ultrlight"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_Desfire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desfire"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_CTL_CPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CTL_CPU"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_ICODE2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ICODE2"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_SecondID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SecondIDcard"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_4442"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SLE4442"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_4428"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SLE4428"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_CT_CPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C_CPU"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_PSAM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PSAM1"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_KeyBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KeyBoard"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_24Cxx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AT24Cxx"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_card_102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AT88SC102"></RadioButton>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_cardType"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text="Test" />
+
+            <Button
+                android:id="@+id/btn_autoTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_cardType"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/button1"
+                android:text="AutoTest" />
+
+            <Button
+                android:id="@+id/btn_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_cardType"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/btn_autoTest"
+                android:text="Clean" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/button1"
+                android:layout_marginTop="10dp"
+                android:editable="false"
+                android:ems="100" />
+
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</ScrollView>
