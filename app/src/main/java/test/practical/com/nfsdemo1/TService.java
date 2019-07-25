@@ -76,7 +76,7 @@ public class TService extends Service {
         this.registerReceiver(this.br_call, filter);
 
         // if(terminate != null) {
-        // stopSelf();
+        // stopSelf();kkkk
         // }
         return START_NOT_STICKY;
     }
