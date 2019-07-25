@@ -77,6 +77,7 @@ public class TService extends Service {
 
         // if(terminate != null) {
         // stopSelf();kkkk
+        //************
         // }
         return START_NOT_STICKY;
     }
